@@ -13,58 +13,58 @@
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
 // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
 
-let arr = []
+let arr1:number[] = []
 
-// for (let i = 0; i < 200; i++) {
-// 	if(i % 2 === 0) {
-// 		arr.push(i)
-// 	}
-// }
+for (let i: number = 0; i < 200; i++) {
+	if(i % 2 === 0) {
+        arr1.push(i)
+	}
+}
 
-// for (let i = 0; i < 200; i++) {
-// 	if(i % 2 !== 0) {
-// 		arr.push(i)
-// 	}
-// }
+for (let i: number = 0; i < 200; i++) {
+	if(i % 2 !== 0) {
+		arr1.push(i)
+	}
+}
 
-// for (let i = 0; i < 20; i++) {
-// 	arr.push(Math.floor(Math.random() * 100 ))
-// }
+for (let i:number = 0; i < 20; i++) {
+	arr1.push(Math.floor(Math.random() * 100 ))
+}
 
-// for (let i = 0; i < 20; i++) {
-// 	arr.push(Math.floor(Math.random() * (732 - 7)) + 8)
-// }
+for (let i: number = 0; i < 20; i++) {
+	arr1.push(Math.floor(Math.random() * (732 - 7)) + 8)
+}
 
-// for (let i = 2; i < arr.length; i +=3) {
-// 	console.log(arr[i] )
-// }
+for (let i: number = 2; i < arr1.length; i +=3) {
+	console.log(arr1[i] )
+}
 
-// for (let i = 2; i < arr.length; i += 3) {
-// 	if (arr[i] % 2 === 0) console.log(arr[i])
-// }
+for (let i:number = 2; i < arr1.length; i += 3) {
+	if (arr1[i] % 2 === 0) console.log(arr1[i])
+}
 
-// let newArr = []
-//
-// // for (let i = 2; i < arr.length; i += 3) {
-// // 	if (arr[i] % 2 === 0) newArr.push(arr[i])
-// // }
-//
-// for (let i =1; i < arr.length; i++) {
-// 	if (arr[i] % 2 === 0) console.log(arr[i -1])
-// }
-//
-// console.log(arr)
-// console.log(newArr)
+let newArr: number[] = []
 
-// let arr2 = [100, 250, 50, 168, 120, 345, 188]
+for (let i:number = 2; i < arr.length; i += 3) {
+	if (arr1[i] % 2 === 0) newArr.push(arr1[i])
+}
 
-// let average = arr2.reduce((acc, cur) => acc + cur, 0)/ arr2.length
-// console.log(average)
+for (let i:number =1; i < arr.length; i++) {
+	if (arr1[i] % 2 === 0) console.log(arr1[i -1])
+}
 
-// let newArr = arr2.map(item => item*5)
-// console.log(newArr);
+console.log(arr1)
+console.log(newArr)
 
-let array = [1, 2, 3, 4, 5, 'a', 'b', 'c', false, false, true, {}, [], undefined, NaN];
+let arr2:number[] = [100, 250, 50, 168, 120, 345, 188]
 
-let newArr = array.filter(item => Number.isFinite(item));
-console.log(newArr);
+let average:number = arr2.reduce((acc:number, cur:number):number => acc + cur, 0)/ arr2.length
+console.log(average)
+
+let newArr2: number[] = arr2.map(item => item*5)
+console.log(newArr2);
+
+let array: (number | string | boolean | {} | [] | undefined|null | typeof NaN)[] = [1, null, 2, 0, 3, 4, 5, 'a', 'b', 'c', false, false, true, {}, [], undefined, NaN];
+
+let newArr1 = array.filter(item => typeof item === 'number' && Number.isFinite(item));
+console.log(newArr1);
