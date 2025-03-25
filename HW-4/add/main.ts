@@ -1,4 +1,11 @@
-let arr = [
+type PostUser = {
+    userId: number,
+    id: number,
+    title: string,
+    body: string,
+}
+
+let arrPost: PostUser[] = [
     {
         userId: 1,
         id: 1,
@@ -502,25 +509,25 @@ let arr = [
     }
 ];
 
-// let wrap = document.createElement('div')
-// wrap.classList.add('wrap')
-//
-// for (let arrElement of arr) {
-//
-//
-// 	let post = document.createElement('div')
-// 	post.classList.add('post-card')
-//
-// 	let h3 = document.createElement('h3')
-// 	h3.innerText = arrElement.title
-//
-// 	let p = document.createElement('p')
-// 	p.innerText = arrElement.body
-//
-// 	document.body.appendChild(wrap)
-// 	wrap.appendChild(post)
-// 	post.append(h3, p)
-// }
+let wrap: HTMLDivElement = document.createElement('div')
+wrap.classList.add('wrap')
+
+for (let arrElement of arrPost) {
+
+
+    let post: HTMLDivElement = document.createElement('div')
+    post.classList.add('post-card')
+
+    let h3: HTMLHeadingElement = document.createElement('h3')
+    h3.innerText = arrElement.title
+
+    let p: HTMLParagraphElement = document.createElement('p')
+    p.innerText = arrElement.body
+
+    document.body.appendChild(wrap)
+    wrap.appendChild(post)
+    post.append(h3, p)
+}
 
 
 // --створити масив з:
@@ -531,13 +538,13 @@ let arr = [
 // #4aDbSgh
 // -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
 
-const arr1 = [1, 2, 3, 4, 5]
-console.log(arr1)
-const arr2 = ['a', 'b', 'c', 'd', 'e'];
-console.log(arr2)
-const arr3 = [1, 2, 'a', true, false]
-console.log(arr3)
-const arr4 = []
+const arr11: number[] = [1, 2, 3, 4, 5]
+console.log(arr11)
+const arr12: string[] = ['a', 'b', 'c', 'd', 'e'];
+console.log(arr12)
+const arr13: (number | string | boolean)[] = [1, 2, 'a', true, false]
+console.log(arr13)
+const arr4: any = []
 arr4[arr4.length] = 'a'
 arr4[arr4.length] = 'b'
 arr4[arr4.length] = 3
@@ -554,125 +561,125 @@ console.log(arr4)
 // 8. вивести масив в зворотньому порядку.
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
 
-const array = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18]
-let i = 0
-// while (i < array.length) {
-// 	// console.log(array[i])
-// 	i++
-// }
+const array1: any[] = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18]
+let item: number = 0
+while (i < array1.length) {
+    console.log(array[i])
+    i++
+}
 
-// for (let i = 1; i < array.length; i++) {
-// 	// console.log(array[i])
-// }
+for (let i: number = 1; i < array1.length; i++) {
+    console.log(array[i])
+}
 
-// while (i < array.length) {
-// 	// if (i % 2 !== 0) console.log(array[i])
-// 	i++
-// }
+while (i < array1.length) {
+    if (i % 2 !== 0) console.log(array1[i])
+    i++
+}
 
-// for (let i = 1; i < array.length; i++) {
-// 	// if (i % 2 !== 0) console.log(array[i])
-// }
+for (let i = 1; i < array1.length; i++) {
+    if (i % 2 !== 0) console.log(array1[i])
+}
 
-// while (i < array.length) {
-// 	// if (array[i] % 2 === 0) console.log(array[i])
-// 	i++
-// }
+while (i < array1.length) {
+    if (array1[i] % 2 === 0) console.log(array1[i])
+    i++
+}
 
-// for (let i = 1; i < array.length; i++) {
-// 	// if (array[i] % 2 === 0) console.log(array[i])
-// }
+for (let i: number = 1; i < array1.length; i++) {
+    if (array1[i] % 2 === 0) console.log(array1[i])
+}
 
-// for (let i = 1; i < array.length; i++) {
-// 	if (array[i] % 3 === 0) {
-// 		array[i] = 'okten'
-// 	}
-// }
+for (let i: number = 1; i < array1.length; i++) {
+    if (array1[i] % 3 === 0) {
+        array1[i] = 'okten'
+    }
+}
 
-console.log(array)
-// console.log(array.reverse())
+console.log(array1)
+console.log(array1.reverse())
 
-i = array.length - 1
-// while ( i >= 0 ) {
-// 	// console.log(array[i])
-// 	i--
-// }
+item = array1.length - 1
+while (i >= 0) {
+    console.log(array1[i])
+    i--
+}
 
-// for (let i = array.length-1; i >= 0; i--) {
-// 	// console.log(array[i])
-// }
+for (let i: number = array1.length - 1; i >= 0; i--) {
+    console.log(array1[i])
+}
 
-// while (i >= 0) {
-// 	if (i % 2 !== 0)
-// 	 console.log(array[i])
-// 	i--
-// }
+while (i >= 0) {
+    if (i % 2 !== 0)
+        console.log(array1[i])
+    i--
+}
 
-// for (let i = array.length-1; i >= 0; i--) {
-// 	// if (i % 2 !== 0) console.log(array[i])
-// }
+for (let i: number = array1.length - 1; i >= 0; i--) {
+    if (i % 2 !== 0) console.log(array1[i])
+}
 
-// while (i >= 0 ) {
-// 	if (array[i] % 2 === 0) console.log(array[i])
-// 	i--
-// }
-//
-// for (let i = array.length-1; i >= 0; i--) {
-// 	// if (array[i] % 2 === 0) console.log(array[i])
-// }
+while (i >= 0) {
+    if (array1[i] % 2 === 0) console.log(array1[i])
+    i--
+}
+
+for (let i: number = array1.length - 1; i >= 0; i--) {
+    if (array1[i] % 2 === 0) console.log(array1[i])
+}
 
 //Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
 
-let array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-// for (let number of array1) {
-// 	console.log(number)
-// }
+let array2: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for (let number of array2) {
+    console.log(number)
+}
 
 // #GamKju89ob
 // - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
 
-let arrString = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
-// for (let string of arrString) {
-// 	console.log(string)
-// }
+let arrString: string[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+for (let string of arrString) {
+    console.log(string)
+}
 
 // #Bm76xmg
 // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
 
-let arrAny = ['a', true, false, 9, {a: 'b'}, [1, 2, 3, 4, 5], 9, 12, 123];
-// for (let arrAnyElement of arrAny) {
-// 	console.log(arrAnyElement)
-// }
+let arrAny: any[] = ['a', true, false, 9, {a: 'b'}, [1, 2, 3, 4, 5], 9, 12, 123];
+for (let arrAnyElement of arrAny) {
+    console.log(arrAnyElement)
+}
 
 // #u3vmD0YJXh
 // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
 
-let arrType = ['a', 'b', 'c', 'd', 'e', 1, 2, 3, 4, 5, false, true];
-// for (let item of arrType) {
-// 	if(typeof item === 'boolean' ) {
-// 		console.log(item)
-// 	}
-// }
+let arrType: (number | string | boolean)[] = ['a', 'b', 'c', 'd', 'e', 1, 2, 3, 4, 5, false, true];
+for (let item of arrType) {
+    if (typeof item === 'boolean') {
+        console.log(item)
+    }
+}
 
 // #9stMq2ou
 // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
 
-// for (let item of arrType) {
-// 	if (typeof item === 'number') console.log( item)
-// }
+for (let item of arrType) {
+    if (typeof item === 'number') console.log(item)
+}
 
 // #mK4pmM4
 // - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
 
-// for (let arrTypeElement of arrType) {
-// 	if (typeof arrTypeElement === 'string') console.log(arrTypeElement)
-// }
+for (let arrTypeElement of arrType) {
+    if (typeof arrTypeElement === 'string') console.log(arrTypeElement)
+}
 
 // #0pm3EyTKy9
 // - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його
 // елементи в циклі.
 
-let arrAdd = []
+let arrAdd: any[] = []
 
 arrAdd[arrAdd.length] = 'a'
 arrAdd[arrAdd.length] = 55
@@ -681,49 +688,48 @@ arrAdd[arrAdd.length] = false
 arrAdd[arrAdd.length] = ['f', 5]
 arrAdd[arrAdd.length] = true
 
-// for (let arrAddElement of arrAdd) {
-// 	console.log(arrAddElement)
-// }
+for (let arrAddElement of arrAdd) {
+    console.log(arrAddElement)
+}
 
 // #mDMWMW5a
 // - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
 
-// for (let j = 0; j < 10; j++) {
-// 	console.log(j)
-// 	document.write(`<p>${j}</p>`)
-// }
+for (let j: number = 0; j < 10; j++) {
+    console.log(j)
+    document.write(`<p>${j}</p>`)
+}
 
 // #4sXhaa5YMM
 // - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
 
-// for (let j = 0; j < 100; j++) {
-// 	console.log(j)
-// 	document.write(`<p>${j}</p>`)
-// }
+for (let j: number = 0; j < 100; j++) {
+    console.log(j)
+    document.write(`<p>${j}</p>`)
+}
 
 // #s24slNyz7
 // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
 
-// for (let j = 0; j < 200; j += 2) {
-// 	console.log(j)
-// 	document.write(`<p>${j}</p>`)
-// }
+for (let j: number = 0; j < 200; j += 2) {
+    console.log(j)
+    document.write(`<p>${j}</p>`)
+}
 
 // #zananT5FR1
 // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
 
-// for (let j = 0; j < 100; j++) {
-// 	if (j % 2 === 0) {
-// 		console.log(j)
-// 		document.write(`<p>${j}</p>`)
-// 	}
-//
-// }
+for (let j: number = 0; j < 100; j++) {
+    if (j % 2 === 0) {
+        console.log(j)
+        document.write(`<p>${j}</p>`)
+    }
+}
 
 // #Tfrwls7FM
 // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
 
-for (let j = 0; j < 100; j++) {
+for (let j: number = 0; j < 100; j++) {
     if (j % 2 !== 0) {
         console.log(j)
         document.write(`<p>${j}</p>`)
@@ -739,13 +745,23 @@ for (let j = 0; j < 100; j++) {
 // - знайти книжку/ки які писали 2 автори
 // - знайти книжку/ки які писав 1 автор
 
-const books = [
+type Book1 = {
+    title: string,
+    pages: number,
+    authors: string[],
+    genres: string[],
+}
+
+const books: Book1[] = [
     {
         title: "Місто", pages: 220, authors: ["Валер'ян Підмогильний"], genres: ["Реалізм", "Екзистенціалізм", "FSFDF"]
     }, {
         title: "Тіні забутих предків", pages: 180, authors: ["Михайло Коцюбинський"], genres: ["Романтизм", "Драма"]
     }, {
-        title: "Кобзар", pages: 250, authors: ["Тарас Шевченко", 'Pedro'], genres: ["Поезія", "Патріотична література", "sadfg"]
+        title: "Кобзар",
+        pages: 250,
+        authors: ["Тарас Шевченко", 'Pedro'],
+        genres: ["Поезія", "Патріотична література", "sadfg"]
     }, {
         title: "Захар Беркут", pages: 320, authors: ["Іван Франко"], genres: ["Історичний роман", "Драма"]
     }, {
@@ -753,19 +769,19 @@ const books = [
     }
 ];
 
-let bigBook = books.toSorted((a, b) => b.pages - a.pages)[0];
+let bigBook: Book1 | undefined= books.toSorted((a, b): number => b.pages - a.pages)[0];
 console.log(bigBook)
 
-let bigGenres = books.filter(book => book.genres.length === books.reduce((max, book) => Math.max(max, book.genres.length), 0));
+let bigGenres: Book1[] = books.filter(book => book.genres.length === books.reduce((max: number, book: Book1): number => Math.max(max, book.genres.length), 0));
 console.log(bigGenres)
 
-let bigTitles = books.filter(book => book.title.length === books.reduce((max, book) => Math.max(max, book.title.length), 0));
+let bigTitles:Book1[] = books.filter(book => book.title.length === books.reduce((max:number, book: Book1):number => Math.max(max, book.title.length), 0));
 console.log(bigTitles)
 
-let twoAuthor = books.filter(book => book.authors.length === 2)
+let twoAuthor:Book1[] = books.filter(book => book.authors.length === 2)
 console.log(twoAuthor)
 
-let oneAuthor = books.filter(book => book.authors.length === 1)
+let oneAuthor:Book1[] = books.filter(book => book.authors.length === 1)
 console.log(oneAuthor)
 
 
